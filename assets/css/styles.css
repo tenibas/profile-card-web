@@ -19,6 +19,7 @@
   --p-font: 1.1rem;
 
   --fs-100: 1rem;
+  --fs-102: 1.2rem;
   --fs-200: 1.5rem;
   --fs-300: 2rem;
   --fs-400: 2.5rem;
@@ -208,7 +209,6 @@ body {
 .container {
    width: 100%;
    min-height: 100vh;
-   padding-block: 5em;
    overflow: hidden;
    display: flex;
    justify-content: center;
@@ -217,8 +217,8 @@ body {
 
 .container .profile-card {
    width: calc(100% - 1em);
-   max-width: 450px;
-   padding-top: 3em;
+   max-width: 380px;
+   padding-top: 2em;
    background: var(--second-clr);
    border-radius: var(--rounded-1);
    display: flex;
@@ -254,19 +254,19 @@ body {
 }
 
 .profile-card .top-content .profile-content .username {
-   font-size: var(--fs-300);
+   font-size: var(--fs-200);
    font-weight: 700;
    color: var(--white-clr);
 }
 
 .profile-card .top-content .profile-content .location {
-   font-size: var(--fs-200);
+   font-size: var(--fs-102);
    color: var(--white-clr);
 }
 
 .profile-card .top-content .profile-content p {
    margin-top: 1em;
-   font-size: var(--p-font);
+   font-size: var(--fs-100);
 }
 
 .profile-card .top-content .profile-links {
@@ -285,16 +285,29 @@ body {
    color: var(--white-clr);
 }
 
+.profile-card .top-content .profile-links .message:hover {
+   background-color: transparent;
+   color: var(--other-clr);
+   border-color: var(--other-clr);
+   transition: all linear 250ms;
+}
+
 .profile-card .top-content .profile-links .follow {
    color: var(--other-clr);
+}
+
+.profile-card .top-content .profile-links .follow:hover {
+   background-color: var(--other-clr);
+   color: var(--white-clr);
+   transition: all linear 250ms;
 }
 
 .profile-card .bottom-content {
    display: grid;
    gap: 1em;
-   margin-top: 3em;
+   margin-top: 2em;
    padding-top: 1em;
-   padding-bottom: 3em;
+   padding-bottom: 2em;
    background-color: var(--third-clr);
 }
 
@@ -307,7 +320,11 @@ body {
    list-style: none;
    display: flex;
    flex-flow: wrap;
-   justify-content: center;
+   justify-content: flex-start;
    gap: 1em;
+}
+
+.profile-card .bottom-content .skills-container ul li {
+  font-size: .9rem;
 }
 
